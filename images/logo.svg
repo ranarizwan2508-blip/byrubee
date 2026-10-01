@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" width="240" height="40" fill="none">
+  <style>
+    .brand-logo-text {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.34em;
+      fill: #141517;
+      text-transform: uppercase;
+    }
+  </style>
+  <text x="52%" y="29" text-anchor="middle" class="brand-logo-text">RUBE</text>
+</svg>

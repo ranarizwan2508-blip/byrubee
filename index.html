@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RUBE — Curated Modern Lifestyle Essentials | Pakistan</title>
+  <meta name="description" content="Shop luxury curated essentials in Skin Care, Kitchen Accessories, and Tech Accessories at RUBE Pakistan. Cash on Delivery & Free shipping on orders above Rs. 10,000.">
+  <meta name="keywords" content="Rube, Rube Pakistan, dnstore clone, luxury skincare, tech accessories, kitchen accessories, online shopping Pakistan, Cash on Delivery">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RUBE — Curated Modern Lifestyle Essentials">
+  <meta property="og:description" content="Refined presence for contemporary living. Discover Skin Care, Kitchen, and Tech Accessories with fast nationwide shipping across Pakistan.">
+  <meta property="og:site_name" content="RUBE">
+  
+  <!-- Favicon SVG & PNG Assets -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial luxury serif) & Plus Jakarta Sans / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notice Ticker Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="ticker-wrapper">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="ticker-dot">•</span> FREE SHIPPING ON ORDERS ABOVE RS. 10,000</span>
+        <span class="ticker-item"><span class="ticker-dot">•</span> EASY 7-DAY EXCHANGE POLICY ACROSS PAKISTAN</span>
+        <span class="ticker-item"><span class="ticker-dot">•</span> CASH ON DELIVERY & INSTANT WHATSAPP CONFIRMATION</span>
+        <span class="ticker-item"><span class="ticker-dot">•</span> 100% AUTHENTIC QUALITY GUARANTEE</span>
+        <!-- Duplicated for seamless loop -->
+        <span class="ticker-item"><span class="ticker-dot">•</span> FREE SHIPPING ON ORDERS ABOVE RS. 10,000</span>
+        <span class="ticker-item"><span class="ticker-dot">•</span> EASY 7-DAY EXCHANGE POLICY ACROSS PAKISTAN</span>
+        <span class="ticker-item"><span class="ticker-dot">•</span> CASH ON DELIVERY & INSTANT WHATSAPP CONFIRMATION</span>
+        <span class="ticker-item"><span class="ticker-dot">•</span> 100% AUTHENTIC QUALITY GUARANTEE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- Desktop Left Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#collection" data-category="skin-care" class="nav-link category-link">Skin Care</a></li>
+          <li><a href="#collection" data-category="kitchen-accessories" class="nav-link category-link">Kitchen</a></li>
+          <li><a href="#collection" data-category="tech-accessories" class="nav-link category-link">Tech</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Left Hamburger (Minimal 2-line) -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+      </button>
+
+      <!-- Brand Logo Centered -->
+      <div class="brand-logo-container">
+        <a href="#hero" class="brand-logo" aria-label="RUBE Home">
+          <picture>
+            <source srcset="images/logo.svg" type="image/svg+xml">
+            <img src="images/logo.png" alt="RUBE" class="brand-logo-img" width="160" height="32" loading="eager">
+          </picture>
+        </a>
+      </div>
+
+      <!-- Right Header Actions (Search & Cart Bag ONLY - NO Sign-up/Login) -->
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle-btn" id="searchToggleBtn" aria-label="Search Catalog" title="Search">
+          <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="header-action-btn cart-toggle-btn" id="cartToggleBtn" aria-label="Open Shopping Bag" title="Shopping Bag">
+          <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Slide-In Navigation Drawer (From Left) -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="#hero" class="mobile-drawer-brand" aria-label="RUBE Home">
+        <picture>
+          <source srcset="images/logo.svg" type="image/svg+xml">
+          <img src="images/logo.png" alt="RUBE" class="mobile-drawer-logo-img" width="120" height="24">
+        </picture>
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <nav class="mobile-nav-list" aria-label="Mobile Directory">
+        <a href="#hero" class="mobile-nav-link" data-close-drawer>Home</a>
+        <a href="#collection" data-category="skin-care" class="mobile-nav-link" data-close-drawer>Skin Care</a>
+        <a href="#collection" data-category="kitchen-accessories" class="mobile-nav-link" data-close-drawer>Kitchen Accessories</a>
+        <a href="#collection" data-category="tech-accessories" class="mobile-nav-link" data-close-drawer>Tech Accessories</a>
+      </nav>
+
+      <div class="mobile-drawer-divider"></div>
+
+      <div class="mobile-drawer-perks">
+        <div class="perk-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          <span>Free delivery on orders over Rs. 10,000</span>
+        </div>
+        <div class="perk-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Fast nationwide delivery across Pakistan</span>
+        </div>
+        <div class="perk-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          <span>Cash on Delivery & Direct Bank / JazzCash</span>
+        </div>
+      </div>
+
+      <div class="mobile-drawer-contact">
+        <p class="drawer-support-label">Customer Assistance</p>
+        <a href="https://wa.me/923267756787" target="_blank" rel="noopener noreferrer" class="drawer-whatsapp-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.132 8.132 0 0 1-1.26-4.46c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19-.1-.1.14-.38-.28-.31-.47-1.78-.88-2.06-.98-.28-.1-.48-.14-.68.16-.2.29-.78.98-.95 1.18-.17.2-.35.22-.64.08-.29-.14-1.23-.45-2.35-1.45-.87-.77-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.08-.14-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.52.07-.79.37-.28.29-1.05 1.03-1.05 2.51s1.08 2.92 1.23 3.12c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.31.18-1.43-.07-.12-.27-.19-.46-.29z"/>
+          </svg>
+          Chat with Us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <div class="search-modal-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <div class="search-input-wrapper">
+          <svg class="search-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search skincare, kitchen or tech essentials..." autocomplete="off">
+          <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear Search">&times;</button>
+        </div>
+        <button class="search-close-btn" id="searchCloseBtn" aria-label="Close Search">Esc</button>
+      </div>
+
+      <div class="search-suggestions" id="searchSuggestions">
+        <span class="suggestions-label">Popular Searches:</span>
+        <button class="suggestion-chip" data-search="vitamin c">Vitamin C</button>
+        <button class="suggestion-chip" data-search="sunscreen">Sunscreen</button>
+        <button class="suggestion-chip" data-search="charging station">Charging Station</button>
+        <button class="suggestion-chip" data-search="headphones">ANC Headphones</button>
+        <button class="suggestion-chip" data-search="keyboard">Mechanical Keyboard</button>
+        <button class="suggestion-chip" data-search="gan charger">65W GaN Charger</button>
+        <button class="suggestion-chip" data-search="chopper">Mini Chopper</button>
+        <button class="suggestion-chip" data-search="oil dispenser">Oil Dispenser</button>
+        <button class="suggestion-chip" data-search="soap dispenser">Soap Dispenser</button>
+      </div>
+
+      <div class="search-results-container" id="searchResultsContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- HERO SECTION (Dual Responsive: 16:9 Landscape Laptop vs 9:16 Portrait Mobile) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-media-wrapper">
+        <!-- Picture tag serving landscape 16:9 on desktop, portrait 9:16 on mobile -->
+        <picture>
+          <source media="(min-width: 1024px)" srcset="images/hero-grid.jpg">
+          <source media="(max-width: 1023px)" srcset="images/hero-grid.jpg">
+          <img src="images/hero-grid.jpg" alt="Rube Curated Lifestyle Archive" class="hero-media-img" loading="eager">
+        </picture>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <span class="hero-eyebrow">Autumn / Winter Edition 2026</span>
+        <h1 class="hero-title">Refined Presence</h1>
+        <p class="hero-subtitle">An intentional curation of modern essentials across skincare, culinary craft, and desktop technology. Engineered with enduring simplicity.</p>
+        <div class="hero-cta-group">
+          <a href="#collection" class="btn-hero-primary" id="exploreCollectionBtn">Explore Collection</a>
+          <a href="#collection" data-category="skin-care" class="btn-hero-secondary">View Skincare</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <span class="scroll-text">Scroll Down</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Value Proposition Banner (Express Shipping, COD, Direct WhatsApp) -->
+    <section class="features-bar">
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Free Shipping > Rs. 10,000</h4>
+            <p>Swift 2-4 business day delivery across Pakistan</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Cash on Delivery</h4>
+            <p>Pay comfortably upon doorstep verification</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Verified Craftsmanship</h4>
+            <p>High-grade organic formulations & precision metalware</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Direct WhatsApp Order</h4>
+            <p>Instant dispatch tracking via 03267756787</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE COLLECTION SECTION -->
+    <section class="collection-section" id="collection">
+      <div class="collection-header-wrapper">
+        <div class="section-title-block">
+          <span class="section-tagline">Curated Catalog</span>
+          <h2 class="section-title">The Rube Collections</h2>
+          <p class="section-description">Meticulously selected design goods engineered to heighten tactile pleasure and daily ritual.</p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="category-filters" role="tablist" aria-label="Product Categories">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Pieces</button>
+          <button class="filter-tab" data-filter="skin-care" role="tab" aria-selected="false">Skin Care</button>
+          <button class="filter-tab" data-filter="kitchen-accessories" role="tab" aria-selected="false">Kitchen Accessories</button>
+          <button class="filter-tab" data-filter="tech-accessories" role="tab" aria-selected="false">Tech Accessories</button>
+        </div>
+      </div>
+
+      <!-- PRODUCT SLIDER WRAPPER (Horizontal Slider with Left/Right Buttons) -->
+      <div class="product-slider-wrapper">
+        <button class="slider-nav-btn prev-btn" id="sliderPrevBtn" aria-label="Previous products" title="Scroll Left" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="product-grid" id="productGrid" aria-live="polite">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <button class="slider-nav-btn next-btn" id="sliderNextBtn" aria-label="Next products" title="Scroll Right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Brand Story & Philosophy Section (Above Footer) -->
+    <section class="editorial-banner" id="editorialBanner">
+      <div class="editorial-container">
+        
+        <!-- Left Side: Curated Lifestyle Photograph (16:9 Aspect Ratio) -->
+        <div class="editorial-image-column">
+          <img src="images/footer-editorial-banner.jpg" alt="RUBE Quiet Luxury Curated Essentials - Skin Care, Tech & Kitchen Accessories" loading="lazy" class="editorial-img" width="1024" height="576">
+        </div>
+
+        <!-- Right Side: Lifestyle Categories & Design Ethos -->
+        <div class="editorial-content-column">
+          <span class="editorial-eyebrow">Design Standard • Quiet Luxury</span>
+          <h3 class="editorial-heading">Curated Living Across Three Lifestyle Disciplines</h3>
+          <p class="editorial-lead">
+            An ultra-luxurious, modern composition arranged neatly on an elegant Italian white marble countertop with subtle grey veins, seamlessly combining three signature lifestyle categories:
+          </p>
+
+          <div class="editorial-categories-list">
+            <div class="editorial-cat-item">
+              <span class="cat-item-num">01</span>
+              <div class="cat-item-info">
+                <h4 class="cat-item-title">Skin Care</h4>
+                <p class="cat-item-desc">Premium glass and matte cosmetic bottles, a minimal amber serum dropper, a luxury compact powder, and organic cream tubes.</p>
+              </div>
+            </div>
+
+            <div class="editorial-cat-item">
+              <span class="cat-item-num">02</span>
+              <div class="cat-item-info">
+                <h4 class="cat-item-title">Tech Accessories</h4>
+                <p class="cat-item-desc">Sleek aluminum wireless charging pad with a modern smartphone, sleek minimalist wireless matte headphones, and a slim metallic stylus or compact laptop corner.</p>
+              </div>
+            </div>
+
+            <div class="editorial-cat-item">
+              <span class="cat-item-num">03</span>
+              <div class="cat-item-info">
+                <h4 class="cat-item-title">Kitchen Accessories</h4>
+                <p class="cat-item-desc">An elegant aesthetic stainless-steel or matte black pour-over kettle, modern ceramic coffee mug, and minimalist brass/wooden coffee utensils.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="editorial-lighting-badge">
+            <span class="lighting-icon">✦</span>
+            <span><strong>Lighting & Tactile Feel:</strong> Soft, warm natural sunlight streaming from a side window, creating realistic soft shadows and an architectural high-end editorial commercial look.</span>
+          </div>
+
+          <div class="editorial-metrics">
+            <div class="metric">
+              <span class="metric-num">3</span>
+              <span class="metric-label">Curated Verticals</span>
+            </div>
+            <div class="metric">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">Authentic Sourced</span>
+            </div>
+            <div class="metric">
+              <span class="metric-num">24h</span>
+              <span class="metric-label">WhatsApp Dispatch</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cart Slide-Over Drawer (Right Side) -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" role="dialog" aria-label="Shopping Cart">
+    
+    <!-- Drawer Header -->
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <h3 class="cart-title">Your Bag</h3>
+        <span class="cart-counter-pill" id="cartCounterPill">0 items</span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Shopping Bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Indicator Bar -->
+    <div class="free-shipping-progress" id="freeShippingBanner">
+      <div class="progress-message" id="shippingProgressText">Add Rs. 10,000 for FREE shipping across Pakistan</div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shippingProgressBar"></div>
+      </div>
+    </div>
+
+    <!-- Cart Body / Items Container -->
+    <div class="cart-drawer-body" id="cartDrawerBody">
+      <!-- Items dynamically populated -->
+      <div class="empty-cart-view" id="emptyCartView">
+        <svg class="empty-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <p class="empty-title">Your bag is empty</p>
+        <p class="empty-subtitle">Discover our hand-selected modern lifestyle essentials.</p>
+        <button class="btn-shop-now" id="emptyShopNowBtn">Explore Collection</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+
+    <!-- Cart Footer & Checkout Button -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-cost-summary">
+        <div class="cost-row">
+          <span>Subtotal</span>
+          <span class="cost-val" id="cartSubtotalVal">Rs. 0</span>
+        </div>
+        <div class="cost-row">
+          <span>Shipping</span>
+          <span class="cost-val" id="cartShippingVal">Calculated next</span>
+        </div>
+        <div class="cost-divider"></div>
+        <div class="cost-row total-row">
+          <span>Estimated Total</span>
+          <span class="cost-val total-val" id="cartGrandTotalVal">Rs. 0</span>
+        </div>
+      </div>
+
+      <div class="cart-action-buttons">
+        <button class="btn-proceed-checkout" id="proceedCheckoutBtn">
+          <span>Proceed to Checkout</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="cart-trust-badges">
+        <span>🔒 256-Bit SSL Encrypted</span>
+        <span>•</span>
+        <span>🇵🇰 Cash on Delivery Available</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ANTI-FRAUD CHECKOUT MODAL -->
+  <div class="checkout-modal-backdrop" id="checkoutModalBackdrop"></div>
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle" aria-hidden="true">
+    <div class="checkout-modal-header">
+      <div class="checkout-header-info">
+        <span class="checkout-step-badge">Anti-Fraud Verified</span>
+        <h3 id="checkoutModalTitle">Complete Your Order</h3>
+      </div>
+      <button class="checkout-close-btn" id="checkoutCloseBtn" aria-label="Close Checkout">&times;</button>
+    </div>
+
+    <div class="checkout-modal-body">
+      
+      <!-- Order Mini Summary -->
+      <div class="checkout-order-summary">
+        <div class="checkout-summary-header">
+          <span>Order Overview (<span id="checkoutItemCount">0</span> items)</span>
+          <span class="checkout-summary-total" id="checkoutSummaryTotal">Rs. 0</span>
+        </div>
+        <div class="checkout-items-preview" id="checkoutItemsPreview"></div>
+      </div>
+
+      <!-- Checkout Form -->
+      <form id="checkoutForm" novalidate autocomplete="on">
+        
+        <!-- Anti-Spam Hidden Honeypot Field (Silently catches bots) -->
+        <div class="hp-security-check" aria-hidden="true">
+          <label for="user_company_tax_id">Do not fill this field if you are human</label>
+          <input type="text" name="user_company_tax_id" id="user_company_tax_id" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-section-title">1. Contact & Customer Information</div>
+
+        <div class="form-group">
+          <label for="customerName" class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" id="customerName" class="form-input" placeholder="e.g. Asad Khan" required minlength="3">
+          <span class="input-error" id="nameError">Please enter your full legal name.</span>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="customerPhone" class="form-label">Pakistani Mobile Number <span class="req">*</span></label>
+            <div class="phone-input-wrapper">
+              <span class="country-code-pill">🇵🇰 +92</span>
+              <input type="tel" id="customerPhone" class="form-input phone-input" placeholder="03267756787" required maxlength="11" pattern="^03[0-9]{9}$">
+            </div>
+            <span class="input-hint">Must be 11 digits starting with 03 (e.g. 03267756787)</span>
+            <span class="input-error" id="phoneError">Valid Pakistani number required (03XXXXXXXXX).</span>
+          </div>
+
+          <div class="form-group">
+            <label for="customerEmail" class="form-label">Email Address <span class="req">*</span></label>
+            <input type="email" id="customerEmail" class="form-input" placeholder="asad@example.com" required>
+            <span class="input-error" id="emailError">Please enter a valid email address.</span>
+          </div>
+        </div>
+
+        <div class="form-section-title">2. Nationwide Shipping Destination</div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="shippingCity" class="form-label">City <span class="req">*</span></label>
+            <select id="shippingCity" class="form-select" required>
+              <option value="" disabled selected>Select Delivery City</option>
+              <option value="Karachi">Karachi</option>
+              <option value="Lahore">Lahore</option>
+              <option value="Islamabad">Islamabad</option>
+              <option value="Rawalpindi">Rawalpindi</option>
+              <option value="Faisalabad">Faisalabad</option>
+              <option value="Multan">Multan</option>
+              <option value="Peshawar">Peshawar</option>
+              <option value="Quetta">Quetta</option>
+              <option value="Sialkot">Sialkot</option>
+              <option value="Gujranwala">Gujranwala</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Abbottabad">Abbottabad</option>
+              <option value="Bahawalpur">Bahawalpur</option>
+              <option value="Sargodha">Sargodha</option>
+              <option value="Other City">Other City (Pakistan)</option>
+            </select>
+            <span class="input-error" id="cityError">Please select your delivery city.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="shippingPostal" class="form-label">Postal / Zip Code (Optional)</label>
+            <input type="text" id="shippingPostal" class="form-input" placeholder="e.g. 44000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="shippingAddress" class="form-label">Complete Street Address & Landmark <span class="req">*</span></label>
+          <textarea id="shippingAddress" class="form-textarea" rows="2" placeholder="House / Flat No., Street, Sector / Area, Landmark" required minlength="10"></textarea>
+          <span class="input-error" id="addressError">Please provide your complete delivery address for courier dispatch.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="orderNotes" class="form-label">Special Delivery Instructions (Optional)</label>
+          <input type="text" id="orderNotes" class="form-input" placeholder="e.g. Please call before arriving or deliver between 2-6 PM">
+        </div>
+
+        <div class="form-section-title">3. Payment Selection</div>
+
+        <!-- Payment Method Options -->
+        <div class="payment-options-grid">
+          
+          <!-- COD -->
+          <label class="payment-option-card active" id="codOptionCard">
+            <input type="radio" name="paymentMethod" value="COD" checked class="payment-radio">
+            <div class="payment-card-content">
+              <div class="payment-card-header">
+                <span class="payment-name">Cash on Delivery (COD)</span>
+                <span class="payment-badge">Standard</span>
+              </div>
+              <p class="payment-desc">Pay cash when courier delivers parcel to your doorstep anywhere in Pakistan.</p>
+            </div>
+          </label>
+
+          <!-- Direct Bank / Online Payment -->
+          <label class="payment-option-card" id="bankOptionCard">
+            <input type="radio" name="paymentMethod" value="BANK_TRANSFER" class="payment-radio">
+            <div class="payment-card-content">
+              <div class="payment-card-header">
+                <span class="payment-name">Direct Bank / Online Payment</span>
+                <span class="payment-badge">Instant</span>
+              </div>
+              <p class="payment-desc">Transfer via Meezan Bank or JazzCash with zero extra processing fee.</p>
+            </div>
+          </label>
+
+        </div>
+
+        <!-- Copyable Bank Details Box (Shown when Bank selected) -->
+        <div class="bank-details-panel" id="bankDetailsPanel">
+          <div class="bank-panel-alert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Please transfer the exact amount and share the transaction screenshot on WhatsApp.</span>
+          </div>
+
+          <!-- Meezan Bank Detail Box -->
+          <div class="bank-account-box">
+            <div class="bank-box-title">
+              <strong>Meezan Bank</strong> (Meezan Digital Centre)
+            </div>
+            
+            <div class="bank-field-row">
+              <span class="bank-field-label">Account Title:</span>
+              <span class="bank-field-val">MUHAMMAD RIZWAN ZAHID</span>
+            </div>
+
+            <div class="bank-field-row">
+              <span class="bank-field-label">Account Number:</span>
+              <div class="copy-field-wrap">
+                <code class="bank-field-val">00300116296954</code>
+                <button type="button" class="btn-copy" data-copy="00300116296954" title="Copy Account Number">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="bank-field-row">
+              <span class="bank-field-label">IBAN:</span>
+              <div class="copy-field-wrap">
+                <code class="bank-field-val">PK24MEZN0000300116296954</code>
+                <button type="button" class="btn-copy" data-copy="PK24MEZN0000300116296954" title="Copy IBAN">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- JazzCash Detail Box -->
+          <div class="bank-account-box jazzcash-box">
+            <div class="bank-box-title">
+              <strong>JazzCash Account</strong>
+            </div>
+
+            <div class="bank-field-row">
+              <span class="bank-field-label">Account Title:</span>
+              <span class="bank-field-val">MUHAMMAD RIZWAN ZAHID</span>
+            </div>
+
+            <div class="bank-field-row">
+              <span class="bank-field-label">JazzCash Mobile:</span>
+              <div class="copy-field-wrap">
+                <code class="bank-field-val">03267756787</code>
+                <button type="button" class="btn-copy" data-copy="03267756787" title="Copy JazzCash Mobile">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="bank-field-row">
+              <span class="bank-field-label">JazzCash IBAN:</span>
+              <div class="copy-field-wrap">
+                <code class="bank-field-val">PK93JCMA0308923267756787</code>
+                <button type="button" class="btn-copy" data-copy="PK93JCMA0308923267756787" title="Copy JazzCash IBAN">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Checkout Pricing Summary -->
+        <div class="checkout-final-summary">
+          <div class="summary-line">
+            <span>Items Subtotal:</span>
+            <span id="checkoutSubtotal">Rs. 0</span>
+          </div>
+          <div class="summary-line">
+            <span>Courier Shipping (Nationwide):</span>
+            <span id="checkoutShipping">Free</span>
+          </div>
+          <div class="summary-line grand-total-line">
+            <span>Net Payable (PKR):</span>
+            <span class="checkout-grand-total" id="checkoutGrandTotal">Rs. 0</span>
+          </div>
+        </div>
+
+        <!-- Submit & WhatsApp Dispatch Action -->
+        <div class="checkout-submit-area">
+          <button type="submit" class="btn-confirm-order" id="confirmOrderBtn">
+            <svg class="wa-btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.132 8.132 0 0 1-1.26-4.46c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19-.1-.1.14-.38-.28-.31-.47-1.78-.88-2.06-.98-.28-.1-.48-.14-.68.16-.2.29-.78.98-.95 1.18-.17.2-.35.22-.64.08-.29-.14-1.23-.45-2.35-1.45-.87-.77-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.08-.14-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.52.07-.79.37-.28.29-1.05 1.03-1.05 2.51s1.08 2.92 1.23 3.12c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.31.18-1.43-.07-.12-.27-.19-.46-.29z"/>
+            </svg>
+            <span>Confirm Order & Dispatch via WhatsApp</span>
+          </button>
+          <p class="checkout-guarantee-note">
+            By confirming, your order is secured and instantly sent to our official dispatch line at <strong>+92 326 7756787</strong>.
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="success-modal-backdrop" id="successModalBackdrop"></div>
+  <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="success-modal-content">
+      <div class="success-icon-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <span class="success-eyebrow">Order Placed Successfully</span>
+      <h3 class="success-title">Thank You for Your Order</h3>
+      <p class="success-subtitle">Order Reference: <strong id="successOrderRef">#RUB-0000</strong></p>
+
+      <div class="success-details-card" id="successDetailsCard">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="success-actions">
+        <a href="#" id="reopenWhatsAppLink" target="_blank" rel="noopener noreferrer" class="btn-wa-success">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.132 8.132 0 0 1-1.26-4.46c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19-.1-.1.14-.38-.28-.31-.47-1.78-.88-2.06-.98-.28-.1-.48-.14-.68.16-.2.29-.78.98-.95 1.18-.17.2-.35.22-.64.08-.29-.14-1.23-.45-2.35-1.45-.87-.77-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.08-.14-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.52.07-.79.37-.28.29-1.05 1.03-1.05 2.51s1.08 2.92 1.23 3.12c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.31.18-1.43-.07-.12-.27-.19-.46-.29z"/>
+          </svg>
+          Open in WhatsApp (03267756787)
+        </a>
+        <button type="button" class="btn-continue-shopping" id="continueShoppingBtn">Continue Browsing RUBE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW PRODUCT MODAL -->
+  <div class="product-modal-backdrop" id="productModalBackdrop"></div>
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="product-modal-close" id="productModalClose" aria-label="Close product view">&times;</button>
+    <div class="product-modal-content" id="productModalContent">
+      <!-- Rendered dynamically -->
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive"></div>
+
+  <!-- FOOTER (Dual Responsive: 4-Col Desktop vs Accordion Mobile) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- DESKTOP FOOTER (4-Column Layout for >= 1024px) -->
+      <div class="desktop-footer-grid">
+        
+        <!-- Column 1: Brand & Ethos -->
+        <div class="footer-col brand-col">
+          <a href="#hero" class="footer-brand-logo" aria-label="RUBE Home">
+            <picture>
+              <source srcset="images/logo-white.svg" type="image/svg+xml">
+              <img src="images/logo-white.png" alt="RUBE" class="footer-logo-img" width="140" height="28" loading="lazy">
+            </picture>
+          </a>
+          <p class="footer-brand-bio">
+            Engineered modern essentials. Curating quiet luxury and tactile satisfaction across skincare, culinary, and digital work spaces in Pakistan.
+          </p>
+          <div class="footer-contact-snippet">
+            <span class="snippet-label">Official WhatsApp Dispatch:</span>
+            <a href="https://wa.me/923267756787" target="_blank" rel="noopener noreferrer" class="snippet-wa">
+              +92 326 7756787
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#collection" data-category="skin-care" class="footer-link">Skin Care Rituals</a></li>
+            <li><a href="#collection" data-category="kitchen-accessories" class="footer-link">Kitchen Accessories</a></li>
+            <li><a href="#collection" data-category="tech-accessories" class="footer-link">Tech & Desk Objects</a></li>
+            <li><a href="#collection" data-category="all" class="footer-link">Full Archive</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Policies -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Client Care</h4>
+          <ul class="footer-links">
+            <li><a href="#shippingPolicy" class="footer-link policy-link" data-policy="shipping">Shipping & Delivery</a></li>
+            <li><a href="#exchangePolicy" class="footer-link policy-link" data-policy="exchange">7-Day Exchange Policy</a></li>
+            <li><a href="#paymentTerms" class="footer-link policy-link" data-policy="payment">Payment Methods (COD & Bank)</a></li>
+            <li><a href="#authenticity" class="footer-link policy-link" data-policy="authenticity">Authenticity Guarantee</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter & Dispatch Bulletin -->
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-heading">Private Dispatch</h4>
+          <p class="newsletter-desc">Subscribe to receive limited drop notifications, seasonal edits, and exclusive private offers.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="newsletter-input-wrap">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" required class="newsletter-input">
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+            <span class="newsletter-success" id="newsletterSuccess">You have been added to the private circle.</span>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- MOBILE FOOTER (Accordion Structure for Width < 768px) -->
+      <div class="mobile-footer-accordion">
+        
+        <div class="mobile-footer-brand-box">
+          <a href="#hero" class="footer-brand-logo" aria-label="RUBE Home">
+            <picture>
+              <source srcset="images/logo-white.svg" type="image/svg+xml">
+              <img src="images/logo-white.png" alt="RUBE" class="footer-logo-img" width="130" height="26" loading="lazy">
+            </picture>
+          </a>
+          <p class="footer-brand-bio">
+            Curated modern lifestyle essentials. Engineered for contemporary living in Pakistan.
+          </p>
+        </div>
+
+        <!-- Accordion 1: Categories -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="accCategories">
+            <span>Explore Categories</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content" id="accCategories">
+            <ul class="accordion-links">
+              <li><a href="#collection" data-category="skin-care" class="accordion-link">Skin Care Rituals</a></li>
+              <li><a href="#collection" data-category="kitchen-accessories" class="accordion-link">Kitchen Accessories</a></li>
+              <li><a href="#collection" data-category="tech-accessories" class="accordion-link">Tech Accessories</a></li>
+              <li><a href="#collection" data-category="all" class="accordion-link">View All Products</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Client Care Policies -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="accPolicies">
+            <span>Client Policies</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content" id="accPolicies">
+            <ul class="accordion-links">
+              <li><a href="#shippingPolicy" class="accordion-link policy-link" data-policy="shipping">Shipping & Courier Terms</a></li>
+              <li><a href="#exchangePolicy" class="accordion-link policy-link" data-policy="exchange">Easy 7-Day Exchange</a></li>
+              <li><a href="#paymentTerms" class="accordion-link policy-link" data-policy="payment">COD & Direct Bank Options</a></li>
+              <li><a href="#authenticity" class="accordion-link policy-link" data-policy="authenticity">Quality Guarantee</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Dispatch Bulletin -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="accNewsletter">
+            <span>Stay Connected</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content" id="accNewsletter">
+            <p class="accordion-desc">Subscribe to receive limited drop notifications and exclusive private codes.</p>
+            <form class="mobile-newsletter-form" id="mobileNewsletterForm">
+              <input type="email" placeholder="Your email address" required class="mobile-newsletter-input">
+              <button type="submit" class="btn-mobile-subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar (Shared) -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-info">
+          <p>&copy; 2026 RUBE Pakistan. All rights reserved. Direct WhatsApp Concierge: <a href="https://wa.me/923267756787" class="wa-foot-link">+92 326 7756787</a></p>
+        </div>
+        <div class="footer-bottom-badges">
+          <span class="badge-item">TCS & Leopards Courier</span>
+          <span class="badge-sep">•</span>
+          <span class="badge-item">Cash on Delivery</span>
+          <span class="badge-sep">•</span>
+          <span class="badge-item">Meezan & JazzCash</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- POLICY INFORMATION MODAL -->
+  <div class="policy-modal-backdrop" id="policyModalBackdrop"></div>
+  <div class="policy-modal" id="policyModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="policy-modal-content">
+      <button class="policy-modal-close" id="policyModalClose">&times;</button>
+      <div class="policy-modal-body" id="policyModalBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
